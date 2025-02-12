@@ -1,0 +1,56 @@
+---
+import DocumentCv from "../icons/DocumentCv.astro";
+import Github from "../icons/Github.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
+import Pill from "./Pill.astro";
+import ScrollArrow from "./ScrollArrow.astro";
+---
+<section id="hero" class="min-h-screen">
+    <section class="flex justify-between pt-[15vh] sm:pt-[20vh] items-center md:px-8 lg:px-12">
+        <div class="hidden sm:block">
+            <img class="rounded-full sm:w-[30vh] lg:w-[40vh] ml-0 sm:px-2 lg:mx-10" src="images/bg_prof.png" alt="">
+        </div>
+        <div class="flex">
+            <div>
+
+                <p class="text-gray-300 text-xl">Hola soy</p>
+                <h1 
+                    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-3xl md:text-5xl dark:text-white flex items-baseline"
+                >
+                    Sebastian Hernández
+                </h1>
+                <p class="mt-6 max-w-sm sm:max-w-xl text-xl sm:text-lg text-gray-800 dark:text-gray-300 [&>strong]:text-green-400 dark:[&>strong]:text-green-400 [&>strong]:font-semibold">
+                    Apasionado por el <strong>desarrollo web Full Stack</strong>, creando experiencias digitales intuitivas y eficientes con tecnologías modernas.
+                </p>
+    
+                <div class="flex flex-wrap gap-1 w-full mt-6">
+                    <Pill
+                        href="mailto:sh4812681@gmail.com"
+                    >
+                        sh4812681@gmail.com
+                        <Mail class="w-5 h-5 fill-amber-50 group-hover:fill-blue-700"/>
+                    </Pill>
+                    <Pill
+                        href="https://github.com/SebastianHernandez69"
+                    >
+                        <Github class="w-5 h-5 fill-amber-50 group-hover:fill-purple-950"/>
+                    </Pill>
+                    <Pill
+                        href="https://www.linkedin.com/in/sebastian-h-437849296/"
+                    >
+                        <LinkedIn class="w-5 h-5 fill-amber-50 group-hover:fill-blue-800"/>
+                    </Pill>
+                    <Pill
+                        href="https://www.linkedin.com/in/sebastian-h-437849296/"
+                    >
+                        <DocumentCv class="w-5 h-5 fill-amber-50 group-hover:fill-amber-400"/>
+                    </Pill> 
+                </div>                
+            </div>
+        </div>
+    </section>
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+        <ScrollArrow/>
+    </div>
+</section>

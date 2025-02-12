@@ -1,0 +1,56 @@
+---
+import JavaScript from "../icons/tech/JavaScript.astro"
+import TypeScript from "../icons/tech/TypeScript.astro"
+import React from "../icons/tech/React.astro"
+import Nextjs from "../icons/tech/Nextjs.astro"
+import Nestjs from "../icons/tech/Nestjs.astro"
+import Nodejs from "../icons/tech/Nodejs.astro"
+import SpringBoot from "../icons/tech/SpringBoot.astro"
+import Java from "../icons/tech/Java.astro"
+import Csharp from "../icons/tech/Csharp.astro"
+import MySql from "../icons/tech/MySql.astro"
+import Postgre from "../icons/tech/Postgre.astro"
+import Prisma from "../icons/tech/Prisma.astro"
+
+const STACK = [
+    { title: "Backend", items: [
+        { Icon: Nodejs, percentage: 75 },
+        { Icon: SpringBoot, percentage: 60 },
+        { Icon: Nestjs, percentage: 80 },
+        { Icon: Java, percentage: 90 },
+        { Icon: Csharp, percentage: 70 }
+    ]},
+    { title: "Frontend", items: [
+        { Icon: JavaScript, percentage: 85 },
+        { Icon: TypeScript, percentage: 80 },
+        { Icon: React, percentage: 95 },
+        { Icon: Nextjs, percentage: 75 }
+    ]},
+    { title: "Bases de datos", items: [
+        { Icon: MySql, percentage: 70 },
+        { Icon: Postgre, percentage: 65 },
+        { Icon: Prisma, percentage: 50 }
+    ]}
+];
+
+const techClasses = "w-10 h-10 sm:w-13 sm:h-13s brightness-50 transition-all duration-300 hover:brightness-100";
+
+---
+
+<section class="grid grid-cols-2 md:grid-cols-3">
+    
+    {STACK.map(({ title, items }) => (
+        <div class="flex flex-col my-6 w-full gap-4 px-3">
+            <h1 class="text-center text-lg text-amber-50 font-semibold">{title}</h1>
+            {items.map(({Icon, percentage}) => (
+                <div class="flex items-center w-full gap-2">
+                    <Icon class={techClasses} />
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style={{ width: `${percentage}%` }}></div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    ))}
+    
+</section>

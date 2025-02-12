@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection('projects');
+
+---
+
+
+<div>
+    {
+        projects.map(project => (
+            <h1>{project.data.nombre}</h1>
+        ))
+    }
+</div>

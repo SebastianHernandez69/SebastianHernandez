@@ -1,37 +1,5 @@
 ---
-import JavaScript from "../icons/tech/JavaScript.astro"
-import TypeScript from "../icons/tech/TypeScript.astro"
-import React from "../icons/tech/React.astro"
-import Nextjs from "../icons/tech/Nextjs.astro"
-import Nestjs from "../icons/tech/Nestjs.astro"
-import Nodejs from "../icons/tech/Nodejs.astro"
-import SpringBoot from "../icons/tech/SpringBoot.astro"
-import Java from "../icons/tech/Java.astro"
-import Csharp from "../icons/tech/Csharp.astro"
-import MySql from "../icons/tech/MySql.astro"
-import Postgre from "../icons/tech/Postgre.astro"
-import Prisma from "../icons/tech/Prisma.astro"
-
-const STACK = [
-    { title: "Backend", items: [
-        { Icon: Nodejs, percentage: 75 },
-        { Icon: SpringBoot, percentage: 60 },
-        { Icon: Nestjs, percentage: 80 },
-        { Icon: Java, percentage: 90 },
-        { Icon: Csharp, percentage: 70 }
-    ]},
-    { title: "Frontend", items: [
-        { Icon: JavaScript, percentage: 85 },
-        { Icon: TypeScript, percentage: 80 },
-        { Icon: React, percentage: 95 },
-        { Icon: Nextjs, percentage: 75 }
-    ]},
-    { title: "Bases de datos", items: [
-        { Icon: MySql, percentage: 70 },
-        { Icon: Postgre, percentage: 65 },
-        { Icon: Prisma, percentage: 50 }
-    ]}
-];
+import { STACK } from '../content/data/data'
 
 const techClasses = "w-10 h-10 sm:w-13 sm:h-13s brightness-50 transition-all duration-300 hover:brightness-100";
 

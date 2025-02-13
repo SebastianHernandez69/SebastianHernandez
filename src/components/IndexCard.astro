@@ -1,0 +1,9 @@
+---
+import { ABOUT } from "../content/data/data";
+---
+
+<div class="flex flex-col gap-3">
+    {ABOUT.map(({content}) => (
+        <article class="text-sm mt-3 sm:text-lg text-amber-50" set:html={content}></article>
+    ))}
+</div>

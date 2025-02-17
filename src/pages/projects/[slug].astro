@@ -1,0 +1,36 @@
+---
+import { getCollection, render} from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+
+
+export async function getStaticPaths() {
+    const projects = await getCollection('projects');
+    
+    return projects.map((project) => (
+        {
+            params: {slug: project.slug},
+            props: { data: project} 
+        }
+    ))
+}
+
+const { data } = Astro.props;
+const { img } = data.data;
+
+const { Content } = await render(data)
+
+---
+
+<Layout>
+    <main class="container mx-auto px-4">
+        <div class="h-14"></div>
+        <section class="md:px-8 lg:px-12">
+            {img && (
+                <img src={img}/>
+            )}
+            <article class="prose prose-invert w-full max-w-none mt-6">
+               <Content/>
+            </article>
+        </section>
+    </main>
+</Layout>

@@ -1,13 +1,42 @@
 ---
 nombre: SharkCat - Plataforma de consultas academicas
-img: projects/sc.webp
+img: /images/projects/sc-desktop.png
 descripcion: Plataforma web de tutorías que conecta pupilos con tutores, permitiendo la gestión de preguntas, asignación de materias y chat en tiempo real.
 tools:
-  - "Nextjs"
+  - "Nextjs" 
   - "Nestjs"
   - "Postgre"
 ---
 
-Esta web app aborda el problema de la falta de una plataforma centralizada para conectar tutores y pupilos en un entorno educativo interactivo.
+# SharkCat – Plataforma de Consultas Académicas  
 
-La plataforma facilita la conexión entre usuarios para el aprendizaje personalizado en diversas materias. Los usuarios pueden registrarse en el sistema y asumir distintos roles: tutor y pupilo, y permite la gestión de preguntas, asignación de tutores a materias específicas y el seguimiento del progreso de los pupilos.
+Muchos estudiantes tienen dificultades para resolver sus dudas fuera del aula, ya sea por falta de acceso a respuestas confiables en internet o por la dificultad de contactar con profesores fuera del horario de clase.  
+Este proyecto busca solucionar este problema mediante una plataforma de consultas académicas que conecta a pupilos con tutores especializados en diversos ámbitos.  
+
+## Desarrollo de la API y Seguridad  
+
+Para el backend, desarrollé una **API robusta con NestJS**, asegurando una arquitectura escalable y bien estructurada.  
+Además, implementé un **sistema de autenticación basado en JWT**, junto con **guards y strategies** para gestionar roles y permisos de usuario. Esto protege la integridad de la plataforma y asegura un acceso seguro a la información según el perfil de usuario.  
+
+## Implementación de Stream Chat  
+
+Integré un **sistema de mensajería en tiempo real** con **Stream Chat**, permitiendo que pupilos y tutores se comuniquen de manera inmediata. Esta integración mejora significativamente la interacción dentro de la plataforma, facilitando la resolución de dudas en tiempo real.  
+
+## Gestión de Archivos en AWS S3  
+
+El almacenamiento de archivos es un aspecto clave del proyecto, permitiendo a los usuarios compartir documentos y recursos educativos de manera eficiente. Se integró **AWS S3** para gestionar el guardado de archivos, asegurando una solución escalable y confiable. Esto permite **acceso rápido a documentos, imágenes y otros materiales de apoyo**, optimizando la experiencia del usuario dentro de la plataforma.  
+
+## UI/UX  
+
+Utilicé **Next.js** en el frontend para garantizar un rendimiento óptimo y una interfaz moderna. Se trabajó en la estructura y disposición de los elementos de UI, asegurando que la plataforma sea **completamente responsiva** y accesible desde distintos dispositivos, proporcionando una experiencia fluida y agradable.  
+
+## Tecnologías Utilizadas  
+
+- **Next.js**  
+- **NestJS**  
+- **PostgreSQL**  
+- **Prisma**  
+- **AWS**  
+- **Stream Chat**  
+- **SendGrid**  
+- **JWT**  

@@ -9,7 +9,7 @@ const projects = await getCollection('projects');
 <div>
     {
         projects.map(project => (
-            <h1>{project.data.nombre}</h1>
+            <h1>{project.data.descripcion}</h1>
         ))
     }
 </div>

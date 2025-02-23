@@ -1,6 +1,8 @@
 ---
 import { getCollection, render} from 'astro:content'
 import Layout from '../../layouts/Layout.astro'
+import Github from '../../icons/Github.astro';
+import Pill from '../../components/Pill.astro';
 
 
 export async function getStaticPaths() {
@@ -15,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { data } = Astro.props;
-const { img } = data.data;
+const { img, urls } = data.data;
 
 const { Content } = await render(data)
 
@@ -24,13 +26,27 @@ const { Content } = await render(data)
 <Layout>
     <main class="container mx-auto px-4">
         <div class="h-14"></div>
-        <section class="md:px-8 lg:px-12">
+        <section class="md:px-8 lg:px-12 mb-10">
             {img && (
                 <img src={img}/>
             )}
             <article class="prose prose-invert w-full max-w-none mt-6">
                <Content/>
             </article>
+            <div class="w-full ">
+                <h2 class="text-xl text-amber-50 font-bold py-5">Codigo</h2>
+                <div class="flex gap-2">
+                    {urls?.map((link) => (
+                        <Pill
+                                href={link.url}
+                            >
+                                {link.name}
+                                <Github class="w-5 h-5 fill-amber-50 group-hover:fill-purple-950"/>
+                        </Pill>
+                    ))}
+                    
+                </div>
+            </div>
         </section>
     </main>
 </Layout>

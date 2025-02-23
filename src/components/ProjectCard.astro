@@ -1,7 +1,10 @@
 ---
+import MySql from "../icons/tech/MySql.astro";
 import Nestjs from "../icons/tech/Nestjs.astro";
 import Nextjs from "../icons/tech/Nextjs.astro";
 import Postgre from "../icons/tech/Postgre.astro";
+import React from "../icons/tech/React.astro";
+import SpringBoot from "../icons/tech/SpringBoot.astro";
 import type { ProjectProps } from "../interfaces/interface"
 
 const { nombre, descripcion, tools, href } = Astro.props as ProjectProps;
@@ -9,7 +12,10 @@ const { nombre, descripcion, tools, href } = Astro.props as ProjectProps;
 const iconTools = {
   Nestjs,
   Nextjs,
-  Postgre
+  Postgre,
+  React,
+  SpringBoot,
+  MySql
 }
 ---
 
@@ -20,7 +26,7 @@ const iconTools = {
   >
   <div class="z-10 absolute w-full h-full peer"></div>
   <div
-    class="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full transition-all duration-500"
+    class="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] -top-32 -left-16 w-52 h-44 rounded-full transition-all duration-500"
     style="background-color: #ed5d42;"
     >
   </div>
@@ -28,7 +34,7 @@ const iconTools = {
     class="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 
     peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center 
     peer-hover:justify-center peer-hover:w-full peer-hover:h-full -bottom-32 
-    -right-16 w-full h-44 rounded-t-sm transition-all duration-500"
+    -right-16 w-full h-44 rounded-t-xl transition-all duration-500"
     style="background-color: #e4c85b;"
   >
     <div class="px-3 opacity-0 group-hover:opacity-100 ">

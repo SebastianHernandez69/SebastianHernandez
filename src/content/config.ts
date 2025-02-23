@@ -5,8 +5,14 @@ const projects = defineCollection({
         nombre: z.string(),
         img: z.string().optional(),
         descripcion: z.string(),
-        tools: z.array(z.string())
+        tools: z.array(z.string()),
+        urls: z.array(
+            z.object({
+                name: z.string(),
+                url: z.string().url()
+            })
+        ).optional()
     })
-})
+});
 
 export const collections = { projects };

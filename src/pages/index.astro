@@ -1,7 +1,10 @@
 ---
 import Hero from "../components/Hero.astro";
-import IndexCard from "../components/IndexCard.astro";
+import IndexCard from "../components/AboutCard.astro";
 import Technologies from "../components/Technologies.astro";
+import Github from "../icons/Github.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
 import Tools from "../icons/Tools.astro";
 import Layout from '../layouts/Layout.astro';
 
@@ -24,5 +27,16 @@ import Layout from '../layouts/Layout.astro';
 			</h1>
 			<Technologies/>
 		</section>
+		<footer id="contact" class="flex justify-center gap-3 w-full py-5">
+			<a href="https://github.com/SebastianHernandez69">
+				<Github class="w-7 h-7 fill-amber-50"/>
+			</a>
+			<a href="https://www.linkedin.com/in/sebastian-h-437849296/">
+				<LinkedIn class="w-7 h-7 fill-amber-50"/>
+			</a>
+			<a href="mailto:sh4812681@gmail.com">
+				<Mail class="w-7 h-7 fill-amber-50"/></Mail>
+			</a>
+		</footer>
 	</main>
 </Layout>

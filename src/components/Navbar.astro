@@ -1,22 +1,6 @@
 ---
-const NAV_ITEMS = [
-  {
-    title: "Inicio",
-    url: "/"
-  },
-  {
-    title: "Sobre mí",
-    url: "/#about"
-  },
-  {
-    title: "Proyectos",
-    url: "/projects"
-  },
-  {
-    title: "Contacto",
-    url: "mailto:sh4812681@gmail.com"
-  }
-]
+import { NAV_ITEMS } from "../content/data/data"
+
 ---
 
 <header
@@ -30,14 +14,13 @@ const NAV_ITEMS = [
     {
       NAV_ITEMS.map(item => (
         <a
-          title="Go to the home page"
           class="text-blue-500 hover:text-amber-50 border-2 border-transparent 
           inline-flex items-center px-2 bg-light-secondary rounded-full 
           text-sm text-center transition-colors dark:text-gray-400 
           dark:bg-button-curved-default-dark dark:hover:bg-button-curved-pressed-dark"
           href={item.url}
         >
-          {item.title}
+          {item.title} 
         </a>
       ))
     }

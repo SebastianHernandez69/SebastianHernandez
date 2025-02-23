@@ -1,20 +1,20 @@
 ---
 import { STACK } from '../content/data/data'
 
-const techClasses = "w-10 h-10 sm:w-13 sm:h-13s brightness-50 transition-all duration-300 hover:brightness-100";
+const techClasses = "w-7 h-7 sm:w-9 sm:h-9 brightness-50 transition-all duration-300 group-hover:brightness-100";
 
 ---
 
-<section class="grid grid-cols-2 md:grid-cols-3">
+<section class="grid grid-cols-2">
     
     {STACK.map(({ title, items }) => (
-        <div class="flex flex-col my-6 w-full gap-4 px-3">
+        <div class="flex flex-col my-6 w-full gap-4 px-8">
             <h1 class="text-center text-lg text-amber-50 font-semibold">{title}</h1>
             {items.map(({Icon, percentage}) => (
-                <div class="flex items-center w-full gap-2">
+                <div class="flex items-center w-full gap-2 group">
                     <Icon class={techClasses} />
-                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style={{ width: `${percentage}%` }}></div>
+                    <div class="w-full bg-gray-200 rounded-full h-1.5 group-hover:h-2 dark:bg-gray-700">
+                        <div class="bg-blue-600 h-1.5 group-hover:bg-blue-500 group-hover:h-2 rounded-full" style={{ width: `${percentage}%` }}></div>
                     </div>
                 </div>
             ))}

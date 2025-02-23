@@ -13,7 +13,7 @@ const techClasses = "w-7 h-7 sm:w-9 sm:h-9 brightness-50 transition-all duration
             {items.map(({Icon, percentage}) => (
                 <div class="flex items-center w-full gap-2 group">
                     <Icon class={techClasses} />
-                    <div class="w-full bg-gray-200 rounded-full h-1.5 group-hover:h-2 dark:bg-gray-700">
+                    <div class="w-full  rounded-full h-1.5 group-hover:h-2 bg-gray-700">
                         <div class="bg-blue-600 h-1.5 group-hover:bg-blue-500 group-hover:h-2 rounded-full" style={{ width: `${percentage}%` }}></div>
                     </div>
                 </div>

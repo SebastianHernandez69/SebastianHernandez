@@ -5,19 +5,19 @@ import { NAV_ITEMS } from "../content/data/data"
 
 <header
   class="fixed top-0 left-1/2 -translate-x-1/2 px-1.25 py-1.25 mt-1 
-  shadow-box-up rounded-2xl dark:bg-box-dark dark:shadow-box-dark-out
-  backdrop-blur-md dark:bg-box-dark/60 transition-all z-[9999]"
+  shadow-box-up rounded-2xl bg-box-dark shadow-box-dark-out
+  backdrop-blur-md bg-box-dark/60 transition-all z-[9999]"
 >
   <div
-    class="dark:shadow-buttons-box-dark rounded-2xl w-full px-1.5 md:px-3 flex gap-x-2 justify-center"
+    class="shadow-buttons-box-dark rounded-2xl w-full px-1.5 md:px-3 flex gap-x-2 justify-center"
   >
     {
       NAV_ITEMS.map(item => (
         <a
-          class="text-blue-500 hover:text-amber-50 border-2 border-transparent 
+          class="0 hover:text-amber-50 border-2 border-transparent 
           inline-flex items-center px-2 bg-light-secondary rounded-full 
-          text-sm text-center transition-colors dark:text-gray-400 
-          dark:bg-button-curved-default-dark dark:hover:bg-button-curved-pressed-dark"
+          text-sm text-center transition-colors text-gray-400 
+          bg-button-curved-default-dark hover:bg-button-curved-pressed-dark"
           href={item.url}
         >
           {item.title} 

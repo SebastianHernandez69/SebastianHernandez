@@ -1,0 +1,45 @@
+---
+nombre: Infraestructura de ecommerse usando Terraform
+img: /images/projects/ec-hcl.png
+descripcion: Creación y despliegue de la infraestructura necesaria para el funcionamiento de una plataforma de eCommerce en Azure, utilizando Terraform para la automatización y gestión de recursos.
+tools:
+  - "Azure"
+  - "Terraform"
+urls:
+  - name: Repositorio A
+    url: "https://github.com/SebastianHernandez69/Repositorio-A-Proyecto-Terraform"
+  - name: Repositorio B
+    url: "https://github.com/SebastianHernandez69/Repositorio-B-Proyecto-Terraform"
+  - name: Repositorio C
+    url: "https://github.com/SebastianHernandez69/Repositorio-C-Proyecto-Terraform"
+---
+
+
+# Infraestructura para Plataforma de eCommerce en Azure
+
+Este proyecto consiste en la **creación y despliegue de la infraestructura necesaria** para el funcionamiento de una plataforma de **eCommerce**, utilizando **Azure y Terraform** para la automatización y gestión de recursos. La arquitectura implementada permite **alta disponibilidad, escalabilidad y eficiencia** en la entrega de contenido y procesamiento de datos.  
+
+## Diseño y Configuración del Almacenamiento de Imágenes con Azure Container Registry (ACR)
+
+Para gestionar de manera centralizada las imágenes de contenedores de las aplicaciones, diseñé y configuré un **Azure Container Registry (ACR)**. Este servicio permite almacenar las imágenes de las **aplicaciones UI y API para Front Office y Back Office**, facilitando el despliegue automatizado y el versionado eficiente de los contenedores.  
+
+## Despliegue de Aplicaciones en Azure App Service
+
+Para garantizar una ejecución confiable y escalable de las aplicaciones web, configuré un **Azure App Service Plan**, donde desplegué las **WebApps** correspondientes a:  
+- **Front Office** 
+- **Back Office**
+
+Esta infraestructura permite ajustar los recursos de manera flexible, asegurando una disponibilidad óptima de las aplicaciones según la demanda.  
+
+## Implementación de Almacenamiento Estático con Azure Storage Account
+
+Para mejorar el rendimiento y reducir la carga en los servidores de las aplicaciones UI, diseñé y configuré un **Azure Storage Account con Static Website**. Este servicio almacena y sirve los archivos estáticos de la interfaz de usuario, asegurando un acceso rápido y eficiente a los recursos estáticos.  
+
+## Optimización de la Distribución de Contenido con Azure CDN
+
+Para mejorar la velocidad de carga de la plataforma y reducir la latencia, configuré un **Azure CDN**, que permite distribuir el contenido estático almacenado en **Azure Static Website** de forma global. Esto garantiza una mejor experiencia de usuario al reducir los tiempos de respuesta y la carga en los servidores de origen.  
+
+## Tecnologías Utilizadas
+
+- **Azure**  
+- **Terraform** 

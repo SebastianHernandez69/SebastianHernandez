@@ -1,4 +1,5 @@
 ---
+import Azure from "../icons/tech/Azure.astro";
 import JavaScript from "../icons/tech/JavaScript.astro";
 import MySql from "../icons/tech/MySql.astro";
 import Nestjs from "../icons/tech/Nestjs.astro";
@@ -7,6 +8,7 @@ import Nodejs from "../icons/tech/Nodejs.astro";
 import Postgre from "../icons/tech/Postgre.astro";
 import React from "../icons/tech/React.astro";
 import SpringBoot from "../icons/tech/SpringBoot.astro";
+import Terraform from "../icons/tech/Terraform.astro";
 import type { ProjectProps } from "../interfaces/interface"
 
 const { nombre, descripcion, tools, href } = Astro.props as ProjectProps;
@@ -19,7 +21,9 @@ const iconTools = {
   SpringBoot,
   MySql,
   JavaScript,
-  Nodejs
+  Nodejs,
+  Azure,
+  Terraform
 }
 ---
 

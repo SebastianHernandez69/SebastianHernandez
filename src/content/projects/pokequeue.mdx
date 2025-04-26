@@ -1,0 +1,73 @@
+---
+nombre: Poke Queue – Generador de Reportes V2
+img: /images/projects/PokeQueue.png
+descripcion: Plataforma para generar reportes CSV de Pokémon usando información de la PokéAPI, procesada en background mediante Azure Functions y colas de mensajería.
+tools:
+  - "Nextjs"
+  - "FastApi"
+  - "Azure"
+  - "Terraform"
+urls:
+  - name: UI
+    url: https://github.com/SebastianHernandez69/poke.queue.ui
+  - name: API
+    url: https://github.com/SebastianHernandez69/poke.queue.api
+  - name: Function
+    url: https://github.com/SebastianHernandez69/poke.queue.funct
+  - name: SQL
+    url: https://github.com/SebastianHernandez69/poke.queue.sql
+  - name: Terraform
+    url: https://github.com/SebastianHernandez69/poke.terraform
+    
+---
+
+# Poke Queue – Generador de Reportes V2
+
+Esta plataforma permite generar reportes CSV con información de la PokéAPI.  
+Su enfoque está en el procesamiento eficiente de datos en segundo plano usando tecnologías cloud modernas, proporcionando reportes completos y descargables.
+
+## Arquitectura Utilizada
+
+La solución está desplegada en **Azure** y definida completamente con **Terraform**.  
+Se utiliza una arquitectura basada en:
+
+- **Function App y Queue Storage** para el procesamiento en background.
+- **Blob Storage** para el almacenamiento de los reportes generados.
+- **Azure Container Registry (ACR)** para almacenar las imágenes Docker de la UI y API.
+- **Service Plan** para el despliegue de las WebApps.
+
+Este enfoque permite escalar y administrar eficientemente los componentes de la plataforma.
+
+## Eliminación de Reportes
+
+Desarrollé la lógica necesaria para permitir la **eliminación de reportes específicos**, eliminándolos tanto de la **base de datos** como de **Blob Storage**, garantizando una gestión limpia y eficiente de los recursos generados.
+
+## Enriquecimiento de los Reportes
+
+Amplié la información incluida en los reportes de Pokémon, agregando **estadísticas básicas** y **habilidades** de cada uno. Para optimizar la eficiencia de estas consultas, implementé **`concurrent.futures`** en el backend, permitiendo realizar múltiples solicitudes a la PokéAPI de manera concurrente.
+
+## Muestreo Aleatorio
+
+Incluí una funcionalidad que permite a los usuarios **limitar el tamaño de la muestra** de registros en sus reportes, seleccionando un subconjunto de Pokémon de forma aleatoria. Esto permite obtener reportes más ligeros y personalizados según las necesidades del usuario.
+
+## Desafíos y Aprendizajes
+
+Más allá de consumir la PokéAPI, el verdadero valor del proyecto estuvo en coordinar múltiples servicios de **cloud** en una arquitectura distribuida.
+Uno de los principales desafíos fue asegurar que **Azure Functions, colas de mensajería, Blob Storage, base de datos y contenedores** trabajaran en **sincronía**, garantizando la entrega confiable de mensajes, el procesamiento concurrente y la consistencia de los datos.
+Este proyecto me permitió fortalecer habilidades en **arquitectura cloud-native** y **automatización de procesos**.
+
+
+## Tecnologías Utilizadas
+
+- **Next.js**  
+- **FastAPI**  
+- **Azure Functions**  
+- **Blob Storage**  
+- **Queue Storage**  
+- **Terraform**
+- **Azure Container Registry (ACR)**
+
+## Despliegue
+ 
+- [Ver UI desplegada](https://ui-pokequeue-dev-seb.azurewebsites.net)
+- [Ver API desplegada](https://api-pokequeue-dev-seb.azurewebsites.net)
